@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap Multi Step Form with Progress Bar Example</title>
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <!-- Bootstrap 4 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css"
+    />
+    <!-- Telephone Input CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css"
+    />
+    <!-- Icons CSS -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Nice Select CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/secondStyle.css" />
+    <!-- bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="first-bg">
+    
+    <!-- <header class="intro">
+      <h1>Bootstrap Multi Step Form with Progress Bar Example</h1>
+      <p>A Bootstrap multi-step form with progress bar.</p>
+
+      <div class="action">
+        <a
+          href="https://www.codehim.com/bootstrap/bootstrap-forms/bootstrap-multi-step-form-with-progress-bar/"
+          title="Back to download and tutorial page"
+          class="btn back"
+          >Back to Tutorial</a
+        >
+      </div>
+    </header> -->
+
+    <main class="main-area" style="margin-top: 25px;">
+      <article>
+        <!-- Start Multiform HTML -->
+        <section class="multi_step_form">
+          <form id="msform">
+            <!-- Tittle -->
+            <div class="d-flex flex-column justify-content-center align-items-center">
+                      <div>
+                        <img src="assets/logo.png" style="width: 130px" />
+                      </div>
+                    </div>
+            <div class="tittle" style="padding-bottom: 0;">
+              <h2>Business Login</h2>
+              <p style="padding: 0;">
+                Start your own business in easy 3 steps
+              </p>
+            </div>
+                    
+            <!-- progressbar -->
+            <ul id="progressbar" style="margin-bottom: 20px;">
+              <li class="active">Login</li>
+              <li>Business Model</li>
+              <li>Fill application</li>
+            </ul>
+            <!-- fieldsets -->
+            <fieldset class="first-fieldset" style="background-color: #fff;padding-top: 0;">
+              <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                  <!-- <img
+                    src="assets/banner_img.jpg"
+                    style="width: 100%; height: 100%; object-fit: contain"
+                    alt="banner"
+                  /> -->
+                  <div class="d-flex justify-content-center align-items-center"">
+                    <h3 class="text-muted p-0" style="font-family: 'Roboto', sans-serif;
+                    font-style: normal;margin-bottom: 1.5rem;">Step 1</h3>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="d-flex flex-column">
+                    
+
+                    <div style="padding: 0rem 2rem">
+                      <div class="row g-3 needs-validation" novalidate>
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-start" style="margin-top: 0;">
+                          <label
+                            for="validationCustom01"
+                            class="form-label fw-medium fs-6"
+                            style="font-family: 'Roboto', sans-serif;
+                            font-style: normal;"
+                            >First name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom01"
+                            placeholder="first name"
+                            required
+                            style="height: 40px;background-color: #FAFAFA;"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-start" style="margin-top: 0;">
+                          <label
+                            for="validationCustom02"
+                            class="form-label fw-medium fs-6"
+                            style="font-family: 'Roboto', sans-serif;
+                            font-style: normal;"
+                            >Last name</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="validationCustom02"
+                            placeholder="last name"
+                            required
+                            style="height: 40px;background-color: #FAFAFA;"
+                          />
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-start">
+                          <label
+                            for="validationCustomUsername"
+                            class="form-label fw-medium fs-6"
+                            style="font-family: 'Roboto', sans-serif;
+                            font-style: normal;"
+                            >Mobile No</label
+                          >
+                          <div class="has-validation">
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="123456"
+                              id="validationCustomUsername"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                              style="height: 40px;width: 241px;
+                              min-width: 100% !important;background-color: #FAFAFA;"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="col-12 col-md-6 d-flex justify-content-start align-items-center"style="margin-top: 2.8rem;"
+                        >
+                          <button type="button" class="btn otp-btn" style="font-size: .9rem !important;font-family: 'Roboto', sans-serif;
+                          font-style: normal;">
+                            SEND OTP
+                          </button>
+                          <div class="invalid-feedback">
+                            OTP Sent Successfully
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-6 d-flex flex-column align-items-start" style="margin-top: 6px;">
+                          <label
+                            for="validationCustom04"
+                            class="form-label fw-medium fs-6"
+                            style="font-family: 'Roboto', sans-serif;
+                            font-style: normal;"
+                            >OTP</label
+                          >
+                          <div class="has-validation" style="padding-bottom: 20px;">
+                            <input
+                              type="number"
+                              class="form-control"
+                              placeholder="007"
+                              id="validationCustomUsername"
+                              aria-describedby="inputGroupPrepend"
+                              required
+                              style="height: 40px;width: 241px;
+                              min-width: 100% !important;background-color: #FAFAFA;"
+                            />
+                          </div>
+                        </div>
+                        <div
+                          class="col-12 col-md-6 d-flex justify-content-start align-items-center"
+                        >
+                          <button
+                            class="btn otp-btn"
+                            style="width: 152px !important;font-size: .9rem !important;font-family: 'Roboto', sans-serif;
+                            font-style: normal;"
+                          
+                          >
+                            VERIFY & NEXT
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="action-button previous_button" >
+                Back
+              </button>
+              <button type="button" class="next action-button">Continue</button>
+            </fieldset>
+
+            <fieldset class="second-fieldset" style="background-color: #fff">
+              <!-- header -->
+              <div class="d-flex flex-column mt-5">
+                <div>
+                  <h3 class="text-muted">Step 2</h3>
+                </div>
+                <div
+                  class="d-flex justify-content-center align-items-center theme-bg-color"
+                >
+                  <h3 class="text-white p-0 mb-0">Viva Mart Introduction</h3>
+                </div>
+              </div>
+              <!-- Grid -->
+              <div class="row" style="background-color: #fffff5">
+                <div
+                  class="col-12 col-md-12 d-flex align-items-center justify-content-center"
+                  
+                >
+                  <div class="video-container mt-3">
+                    <video
+                      class="grid-video"
+                      width="100%"
+                      height="auto"
+                      class="mt-3"
+                      controls
+                    >
+                      <source src="Vivimartvideo.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-md-12 d-flex align-items-center justify-content-center"
+                >
+                  <p class="grid-txt mt-3 res-txt" style="text-align: justify;">
+                    ViviMart Franchising plans to bring Vegetable and fruits, groceries, Home appliances
+                    Kitchenware, Electrical and Electronics etc. And other daily essential household goods to the
+                    doorsteps of the common man at a reasonable price. vivimart is operated by <span style="color: skyblue;">GVS Food &
+                    Retail Pvt Ltd.</span> So, opening a grocery store is an excellent option. Vivi Mart has created a
+                    unique online shopping experience and offers a variety of services. The goal of this retail
+                    chain is to offer the best value in the market for quality groceries and fast-moving consumer
+                    goods (FMCG) products. The Vivi Mart franchise includes produce, vegetables and fruits,
+                    groceries, food and beverage, home appliances, kitchenware, electrical and electronics, and
+                    so on. 
+                    <br>
+                    &nbsp&nbsp&nbsp &nbsp ViviMart stores do not compromise on quality. Vivi Mart is about to challenge any
+                    semblance of JioMart, Amazon, Flipkart, and Big Basket. Vivi Mart should have a
+                    significant impact on today's online grocery market in a short period of time. Vivi
+                    Mart's goal is to provide the best business opportunity to build retail franchises in all
+                    regions of India. Many people have completed the paperwork for prior registration for
+                    the Vivi Mart franchise. Vivi Mart is expected to create a revolution in the retail
+                    industry and break all records in this industry.
+                  </p>
+                </div>
+              </div>
+              <!-- second header -->
+              <div class="d-flex flex-column mt-5" >
+                <div class="d-flex justify-content-center theme-bg-color">
+                  <h3 class="text-white p-0 mb-0">
+                    Viva Mart Franchise Business Model
+                  </h3>
+                </div>
+              </div>
+              <!-- second grid -->
+              <div class="row mb-5" style="text-align: justify; background-color: #fffff5" >
+                <div class="col-12 mt-3 fw-semibold">
+                  Vivi Mart is an online product delivery service that can be accessed via the internet. For the success of
+                  a delivery platform, the company needs both customers and manufacturers/suppliers to help it complete
+                  the supply chain.
+                </div>
+                <div class="col-12 mt-3 fw-semibold">
+                  Vivi Mart also functions as a standard e-commerce site, where a customer places an online order
+                  through the app or website and the goods are delivered within a specified time frame
+                </div>
+                <div class="col-12 mt-3 fw-semibold">
+                  Vivi Mart is a grocery shop that uses an online-to-offline (O2O) business model, in which consumers may
+                    search for products and place orders online before completing their purchases offline at the local Vivi Mart
+                    in their area. GVS Food & Retail Pvt Ltd already delivers Vivi Mart orders, but the company is developing a
+                    hybrid strategy that blends its retail locations with local Vivi Mart franchises to fulfill orders more quickly.
+                </div>  
+              </div>
+
+              <!-- third grid -->
+
+              <div class="row" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color">Why start a Viva mart Franchise?</h3>
+                </div>
+                <ul>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      Groceries and FMCG products are always in essential demand, so it is a long-term business. Vivi
+                      Mart does not require lengthy paperwork. It also offers a simple return on investment.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      LThe Vivi Mart platform is growing fast as more and more people sign up, visit and place orders.
+                      It is the fastest growing retailer in India.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      Starting a Vivi Mart franchise is financially rewarding and extremely beneficial. The risk is
+                      mitigated by having the support of a well-known brand such as ViviMart.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      Most customers like Vivi Mart, the company also helps you expand your business and attract
+                      new customers. This is your biggest advantage as a newbie. Besides, Vivi Mart gives you more
+                      business through its online presence. its ability to offer good products at low prices. an
+                      important reason for its success.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      ViviMart offers complete digitization of its partners through the Vivi Mart app on the front-end
+                      and Vivi Mart POS on the back-end. These fewer merchants can now process transactions and
+                      stay in touch with their customers.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      This franchise model helps Vivi Mart franchises grow their business and profits by overcoming
+                      challenges such as limited product range, space and delivery.
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <hr />
+
+              <div class="row mt-5" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color">
+                    Requirements for Viva mart Franchise?
+                  </h3>
+                </div>
+                <div class="col-12">
+                  <p class="mt-3 fw-semibold">
+                    Effective 3 Steps to Start a Grocery Store in India with Lowest Investment. Registration
+                        for Vivi Mart franchise can be done online on their official website vivimart.in. If you are a
+                        retailer looking to expand your business, you can become a Vivi Mart franchise. The
+                        following are the requirements for becoming a Vivi Mart franchise.
+                  </p>
+                </div>
+                <ul>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      You should have the proper infrastructure in place to do business.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      The minimum space requirement is <span style="color: purple;">350 to 450 </span>square feet.<br>
+                      <span style="color: purple;"> (There is no need for a business zone.) </span>
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      You must have an adequate deposit or funding to operate the business.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      You must have a vehicle that is suitable for EV vehicles.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      You must have Computer / Internet Connectivity
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      You must have CCTV Set-up
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      Number of Employees: Ideally, 2 to 3 employees would be required to manage the work
+                       efficiently.
+                    </li>
+                  </div>
+                  <div class="col-12 mt-3 fw-semibold">
+                    <li>
+                      Training for all franchised store employees is expected to be completed within two
+                      months. Additional costs must be incurred to complete the training.
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="row" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color">Necessary Documents</h3>
+                </div>
+                <ul class="row mx-3">
+                  <div class="col-12 col-md-6 col-lg-6 my-1 fw-semibold">
+                    <li>Two passport-size photos</li>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6 my-1 fw-semibold">
+                    <li style="margin-left: 25px;">
+                      Address Proof
+                    </li>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6 my-1 fw-semibold">
+                    <li>Store Rental Agreement with NOC <span style="color: purple; font-size: 13px;" > * (submit a scanned copy after approval)</span></li>
+
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6 my-1 fw-semibold">
+                    
+                    <li style="margin-left: 25px;">PAN Card</li>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6 my-1 fw-semibold">
+                    <li>Photocopy of voter ID or Aadhar card</li>
+                    
+                  </div>
+                  
+                </ul>
+              </div>
+
+              <hr />
+
+              <div class="row" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color">Application Process for Viva</h3>
+                </div>
+                <div class="col-12">
+                  <h5>
+                    The application procedure has been given below stepwise:
+                  </h5>
+                </div>
+                <div class="col-12 my-1 fw-semibold text-dark">
+                  <span class="fw-semibold" style="color: purple">Step 1 :</span>
+                  Visit the company's official website at <span style="color: blue;">www.vivimart.in </span> Read and accept the franchise
+                  business model and terms and conditions for the franchise process.
+                </div>
+                <div class="col-12 my-1 fw-semibold text-dark">
+                  <span class="fw-semibold" style="color: purple">Step 2 :</span>
+                  Fill out the application form with basic details like name, address, investment amount,
+                  etc. Relevant documents will also have to be uploaded, such as Aadhar, PAN, etc. After filing the
+                  details, the applicant should click on <span style="color: blue;">“Submit”</span> option for successful registration.
+                </div>
+                <div class="col-12 my-1 fw-semibold text-dark">
+                  <span class="fw-semibold" style="color: purple">Step 3 :</span>
+                  <span style="color: skyblue;">GVS Food & Retail Pvt Ltd</span> will then verify the information, which could take a few days.
+                      Depending on your approved application, location, and investment. Pay the franchise fees online
+                      once the verification procedure is complete, and our relationship manager will contact you to assist
+                      you with the next steps. and agree to the franchise agreement. Start a successful vivimart retail
+                      business as a franchisee.
+                </div>
+              </div>
+
+              <hr />
+
+              <div class="row" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color">Support Provided by Viva Mart</h3>
+                </div>
+                <ul class="row mx-3">
+                  <div class="fw-semibold">
+                    <li>Website and App Support</li>
+                  <li>Inventory Balancing and Planning Available</li>
+                  <li>Fastest Inventory supply and logistic support</li>
+                    <li>Product Pricing Available</li>
+                    <li>Training Support Available</li>
+                    <li>Business Management and Billing Software's Available</li>
+                    <li>Relationship Manager Support Available</li>
+                      <li>Offers/coupons Available</li>
+                      <li>Business Development Support Available</li>
+                  <li>Warranty/Guarantee Support</li>
+                  <li>Digital Marketing Training Available</li>
+                    <li>Television Advertisement Available </li>
+                    <li>Product Information Training Provided</li>
+                    
+                      
+                  </div>
+                  
+                </ul>
+              </div>
+
+              <div class="row my-3" >
+                <div class="col-12 theme-bg-color">
+                  <h3 class="text-center text-white p-0 mb-0">
+                    Investment Required For Vivi Mart Franchise.
+                  </h3>
+                </div>
+                <div class="col-12 mt-3">
+                  <p class="fw-semibold text-dark">
+                    Before s tar ting a bus ines s , you should be prepared for inves tment, space,
+                    and other things needed. Here i s the breakup of the inves tment requi red for a Vivi
+                    Mar t Franchi se.
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-1 p-2 text-dark fw-bold">
+                    Investment
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-1 p-2 text-dark fw-bold">
+                    Approximate Cost
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    Initial Franchise fee
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    30,000 + GST
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    Store Rental Advance Cost
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    1.2-2 Lakhs
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    First-time Stock Purschase
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    2.5-3 Lakhs
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    Expenses
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-2 p-2 text-dark fw-bold">
+                    2-3 Lakhs
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-1 p-2 text-dark fw-bold">
+                    Total Investment
+                  </h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <h6 class="text-center grid-1 p-2 text-dark fw-bold">
+                    5-7 Lakhs
+                  </h6>
+                </div>
+              </div>
+
+              <div class="row my-5">
+                <div class="col-12 theme-bg-color">
+                  <h3 class="text-center text-white p-0 mb-0">
+                    Estimated Monthly Sales and Revenue Forecast
+                  </h3>
+                </div>
+                <div class="row mt-3">
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Approx.Cost of Goods Sold Monthly
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      2,50,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      5,00,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      10,00,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      15,00,000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Approx.Average profit Margin
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      25%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      25%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      25%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      25%
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Wages & Salaries
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      20000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      45000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      60000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      75000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Rent & Electricity
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      40000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      49000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      80000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      95000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Miscellaneous
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      10000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      5000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      8000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      9000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Total Expenses
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      1000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      5000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      8000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      9000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Total Profit
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      100000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      500000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      800000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-1 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      900000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Net Profit Per Month Profit - Expenses
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      100000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      500000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      560000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      900000
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      Net Profit Per Year (Minimum.)
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      100000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      500000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="theme-bg-color p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      760000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-2 col-lg-2 mb-3">
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                      900000
+                    </h6>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12 theme-bg-color">
+                  <h3 class="text-center text-white p-0 mb-0">
+                    How to Share Profit Ratio Company vs Franchise
+                  </h3>
+                </div>
+                <div class="col-12 my-3">
+                  <p style="font-weight: bold;">* Sample Calculation</p>
+                </div>
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      Inventory / Goods Purchase cost
+                    </h6>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-lg-6"
+                    style="margin-bottom: 9px"
+                  >
+                    <h6
+                      class="grid-2 p-2 text-center h-100 d-flex align-items-center justify-content-center fw-bold text-black"
+                    >
+                    ₹ 1,00,000.00
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      Logistics / Transport
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 50,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      GST 18%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 40,000.0
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      Purchase Goods Total Cost
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 1,23,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      Selling Goods Price
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 1,72,000
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      Gross Profit
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6">
+                    <h6 class="grid-1 p-2 text-center fw-bold text-black">
+                      ₹ 1,55,000
+                    </h6>
+                  </div>
+                  <div class="col-12 my-3">
+                    <p style="font-weight: bold;">* Sharing Ratio Company Vs Franchise</p>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      Company share
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      20%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 9840.00
+                    </h6>
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      Franchise share
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      90%
+                    </h6>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <h6 class="grid-2 p-2 text-center fw-bold text-black">
+                      ₹ 95840.00
+                    </h6>
+                  </div>
+                  <div class="col-12">
+                    <p style="font-weight: bold;">
+                      * Profit ratios changes depending on credit and payment.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="row p-5" style="text-align: justify; background-color: #fffff5">
+                  <div class="col-12">
+                    <h3 class="theme-color">
+                      The Advantages of Owning a Viva Mart System
+                    </h3>
+                  </div>
+                  <div class="col-12">
+                    <p class="fw-semibold">
+                      There are many advantages to owning a Vivi Mart franchise in India. The GVS Food &
+                      Retail Pvt Ltd business opportunity has competitive strengths that contribute to a profitable
+                      model for all parties involved, including consumers. Vivi Mart is the strongest brand you can
+                      trust.
+                    </p>
+                  </div>
+                  <ul>
+                    <div class="col-12 mt-3 fw-semibold">
+                      <li>
+                        The groceries and FMCG products sold through Vivimart are always in high demand.
+                      </li>
+                   <li>
+                    They include home appliances, food, toiletries, beauty products, clothing, kitchen appliances,
+                    bed and bath items, household items, etc. The company follows the practice of providing
+                    customers with all their needs at a low price and high quality.
+                      </li>
+                      <li>
+                        Vivi Mart offers customer-friendly services such as free door-to-door delivery, express
+                        deliveries, and no minimum purchase requirements. All these factors contribute to the
+                        promotion and growth of the business.
+                        ut?
+                      </li>
+                      <li>
+                        vivimart provides sufficient on-the-job training, especially in areas such as Inventory
+                        management, Digital marketing, product promotion, customer management and other training.
+                        sales targets.
+                        <li>Vivi Mart is selling online and offline.</li>
+                        <li>A wide range of digital trade channels and retail networks are available.</li>
+                        <li>The company has a diversified and strong brand portfolio that includes consumer goods,
+                          commodities, and general merchandise.</li>
+                        <li>Customers and retail partners benefit from a hyper localized digital marketing strategy.</li>
+                        <li>Retail partnerships support the launch, activation, and promotion of new brands.</li>
+                        <li>The company offers round-the-clock customer service.</li>
+                        <li>The company also provides marketing, brand promotion, and advertising.</li>
+                        <li>Proper training is provided from the beginning of the business.</li>
+                        <li>Highest profit ratio.</li>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="row p-5 mt-3" style="text-align: justify; background-color: #fffff5">
+                <div class="col-12">
+                  <h3 class="theme-color fw-bold">Conclusion</h3>
+                </div>
+                <div class="col-12">
+                  <p class="fw-semibold">
+                    The growth of the online grocery market in India is driven by an increase in digital
+                    culture and the government's efforts to promote digitization. Increased use of the Internet,
+                    as well as affordable smart phones, has driven the online grocery market forward. This
+                    expansion is made easier through digital payment systems. That’s why online grocery
+                    shopping is the best option for consumers because of factors like time-saving,
+                    convenience, and overall safety.
+                  </p>
+                </div>
+                <div class="col-12">
+                  <p class="fw-bold">
+                    The all-inclusive Franchise Business Model of Vivi Mart is an ideal candidate for this selection.
+                  </p>
+                </div>
+              </div>
+              <hr />
+
+              <!-- <div class="d-flex justify-content-center align-items-center my-5">
+        <a class="btn otp-btn" href="lastForm.html">NEXT STEP</a>
+      </div> -->
+              <button
+                type="button"
+                class="action-button previous previous_button"
+              >
+                Back
+              </button>
+              <button type="button" class="next action-button">Continue</button>
+            </fieldset>
+            <fieldset class="third-fieldset" style="background-color: #fff">
+              <div class="row">
+                <div class="col-12 mt-5">
+                  <h3 class="text-muted">Step 3</h3>
+                </div>
+              </div>
+              <div class="row g-3 mt-3">
+                <div class="row p-3 mb-3" style="background-color: #fffff6">
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <label for="Email" class="form-label fw-bold">Photo</label>
+                    <input
+                      type="file"
+                      class="form-control input-bg"
+                      id="Email"
+                    />
+                    <p
+                      class="text-muted my-3"
+                      style="font-size: 0.9rem !important"
+                    >
+                      Allowed file extension .jpg.png.gif
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <label for="date" class="form-label fw-bold"
+                      >Application Date</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control input-bg"
+                      id="date"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <label for="email" class="form-label fw-bold">Email</label>
+                    <input
+                      type="email"
+                      class="form-control input-bg"
+                      id="email"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4">
+                    <label for="email" class="form-label fw-bold">Location</label>
+                    <input
+                    placeholder="Pin code"
+                      type="number"
+                      class="form-control input-bg"
+                      id="location"
+                    />
+                  </div>
+                </div>
+
+                <div class="row" style="background-color: #fffce1">
+                  <div class="col-12 mt-3">
+                    <h3 class="fw-semibold text-dark">
+                      Franchise Applicant's Personal Particular
+                    </h3>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="name" class="form-label fw-bold">Name</label>
+                    <input type="name" class="form-control" id="name" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="date" class="form-label fw-bold"
+                      >Date of birth</label
+                    >
+                    <input type="date" class="form-control" id="date" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="age" class="form-label fw-bold">Age</label>
+                    <input type="number" class="form-control" id="age" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="c-no" class="form-label fw-bold"
+                      >Contact Number</label
+                    >
+                    <input type="number" class="form-control" id="c-no" />
+                  </div>
+
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="c-no-2" class="form-label fw-bold"
+                      >Gender</label
+                    >
+                    <select
+                    id="m-status"
+                    class="form-select"
+                    style="height: 50px"
+                  > 
+                    <option selected></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Third Gender</option>
+                    
+                  </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="address" class="form-label fw-bold"
+                      >Street Address</label
+                    >
+                    <input type="text" class="form-control" id="address" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="city" class="form-label fw-bold">City</label>
+                    <input type="text" class="form-control" id="city" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="zip" class="form-label fw-bold"
+                      >Zip/Postal Code</label
+                    >
+                    <input type="number" class="form-control" id="zip" />
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="m-status" class="form-label fw-bold"
+                      >Marital Status</label
+                    >
+                    <select
+                      id="m-status"
+                      class="form-select"
+                      style="height: 50px"
+                    > 
+                      <option selected></option>
+                      <option>Married</option>
+                      <option>Unmarried</option>
+                      
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="comm" class="form-label fw-bold"
+                      >Country</label
+                    >
+                    <select
+                    id="m-status"
+                    class="form-select"
+                    style="height: 50px"
+                  > 
+                    <option selected></option>
+                    <option>India</option>
+                    <option>Other</option>
+                    
+                  </select>
+                  </div>
+                </div>
+
+                <div class="row mt-3" style="background-color: #fffce1">
+                  <div class="col-12 mt-3">
+                    <h3 class="fw-semibold text-dark">Education Details</h3>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="education" class="form-label fw-bold"
+                      >Education Qualification</label
+                    >
+                    <select
+                      id="education"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>SSLC</option>
+                      <option>HSC</option>
+                      <option>UG</option>
+                      <option>PG</option>
+                      <option>DORORATE  </option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="education" class="form-label fw-bold"
+                      >Religion</label
+                    >
+                    <select
+                      id="education"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>Hindu</option>
+                      <option>Muslim</option>
+                      <option>Christian </option>
+                      <option>Others</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="education" class="form-label fw-bold"
+                      >Category</label>
+                      <input type="text" class="form-control" id="text" />
+                   
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-4 my-3">
+                    <label for="education" class="form-label fw-bold"
+                      >Current Occupation</label
+                    >
+                    <select
+                      id="education"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>Govt Employee</option>
+                      <option>Self-Employee</option>
+                      <option>Business</option>
+                      <option>Student</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row mt-3" style="background-color: #fffce1">
+                  <div class="col-12 col-md-6 col-lg-6 my-3">
+                    <label for="exp" class="form-label fw-bold mt-3"
+                      >Any Experience for Sale and Marketing Field?</label
+                    >
+                    <select id="exp" class="form-select" style="height: 50px">
+                      <option selected></option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-6 my-3">
+                    <label for="business" class="form-label fw-bold mt-3"
+                      >Do you have an any shop or business?</label
+                    >
+                    <select
+                      id="business"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-6 my-3">
+                    <label for="business" class="form-label fw-bold mt-3"
+                      >Select your Investment maximum range</label
+                    >
+                    <select
+                      id="business"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>Rs 5 Lakh to Rs 10 Lakh</option>
+                      <option>Rs 10 Lakh to Rs 15 Lakh</option>
+                      <option>Rs 15 Lakh to Rs 20 Lakh</option>
+                      <option>Rs 20 Lakh to Rs 25 Lakh</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-md-6 col-lg-6 my-3">
+                    <label for="business" class="form-label fw-bold mt-3"
+                      >How to find funding sources to invest in your
+                      business?</label
+                    >
+                    <select
+                      id="business"
+                      class="form-select"
+                      style="height: 50px"
+                    >
+                      <option selected></option>
+                      <option>Own Money</option>
+                      <option>Personal Loan</option>
+                      <option>Business Loan</option>
+                      <option>Credit Card</option>
+                      <option>Other Source</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="row my-5">
+                  <div class="col-12">
+                    <input type="checkbox" id="term" />
+                    <label for="term"
+                      >I agree to the seller registration agreement</label
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="d-flex justify-content-center align-items-center my-5"
+                >
+                  <!-- <button
+                    type="submit"
+                    class="btn otp-btn"
+                    style="min-width: 220px !important"
+                  >
+                    CREATE SELLER ACCOUNT
+                  </button> -->
+                </div>
+              </div>
+              <button
+                type="button"
+                class="action-button previous previous_button"
+              >
+                Back
+              </button>
+              <a href="#" class="action-button" style="text-decoration: none; width: 200px;">CREATE SELLER ACCOUNT</a>
+            </fieldset>
+          </form>
+        </section>
+        <!-- END Multiform HTML -->
+      </article>
+    </main>
+
+    <footer class="credit" style="margin-top: 20px;">
+      Author: Hyser - Distributed By:
+      <a
+        title="Awesome web design code & scripts"
+        href="https://www.codehim.com?source=demo-page"
+        target="_blank"
+        >CodeHim</a
+      >
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/js/intlTelInput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
